@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mines</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="one">
+        <div class="oneFront">
+          <div class="amount">
+            <input
+              type="number"
+              placeholder="Enter your amount"
+              class="amountInput"
+              min="1"
+            />
+          </div>
+          <div>
+            <h5>Number of Mines</h5>
+            <select
+              name="numberOfMines"
+              id="numberOfMines"
+              data-custom-name="coursesSub10"
+            >
+              <option value="1.4">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+            </select>
+          </div>
+
+          <div>
+            <button id="start">Start</button>
+          </div>
+        </div>
+        <div class="oneBack">
+          <button id="restart">RESTART</button>
+        </div>
+      </section>
+      <section>
+        <div class="mainBoxContainer">
+          <button class="box" id="1"></button>
+          <button class="box" id="2"></button>
+          <button class="box" id="3"></button>
+          <button class="box" id="4"></button>
+          <button class="box" id="5"></button>
+          <button class="box" id="6"></button>
+          <button class="box" id="7"></button>
+          <button class="box" id="8"></button>
+          <button class="box" id="9"></button>
+          <button class="box" id="10"></button>
+          <button class="box" id="11"></button>
+          <button class="box" id="12"></button>
+          <button class="box" id="13"></button>
+          <button class="box" id="14"></button>
+          <button class="box" id="15"></button>
+          <button class="box" id="16"></button>
+          <button class="box" id="17"></button>
+          <button class="box" id="18"></button>
+          <button class="box" id="19"></button>
+          <button class="box" id="20"></button>
+          <button class="box" id="21"></button>
+          <button class="box" id="22"></button>
+          <button class="box" id="23"></button>
+          <button class="box" id="24"></button>
+          <button class="box" id="25"></button>
+        </div>
+        <button id="openInstruction">How to play</button>
+      </section>
+      <section>
+        <h4>WINNING</h4>
+        <div class="profitAmount"></div>
+      </section>
+    </main>
+    <section id="instruction">
+      <div id="instructionBlock">
+        <div style="display: flex; justify-content: space-between">
+          <h1>How to play</h1>
+          <button id="closeInstruction">+</button>
+        </div>
+
+        <ul>
+          <li>Enter the amount you want to bet.</li>
+          <li>Select the maximum number of mines you want.</li>
+          <li>
+            Winning will be the calculated by (bet amount + % of bet amount
+            calculated for the number of mines).
+          </li>
+          <li>
+            <b>Example:</b><br />Bet amount = 200<br />Maximum Number of mine =
+            20<br />Winning = 200 + (200/100 * 20)
+          </li>
+          <li>
+            With each diamond block, winning will increase by the above
+            calculation.
+          </li>
+          <li>The game will end if you press any mined block.</li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
