@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mines</title>
-    <link rel="shortcut icon" href="assets/mine.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css"/>
-
+    <link rel="shortcut icon" href="assets/mine.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h4>Balance</h4>
+      <div id="TotalWinning"></div>
+      <p class="warning" id="balanceWarning"></p>
+      <h5 id="depositeOpen">Deposite</h5>
+    </header>
     <main>
       <section class="one">
         <div class="oneFront">
@@ -20,6 +25,7 @@
               class="amountInput"
               min="1"
             />
+            <p class="warning" id="betWarning"></p>
           </div>
           <div>
             <h5>Number of Mines</h5>
@@ -61,35 +67,37 @@
         </div>
         <div class="oneBack">
           <button id="restart">RESTART</button>
+
+          <button id="cashOut">Cash Out</button>
         </div>
       </section>
       <section>
         <div class="mainBoxContainer">
-          <button class="box" id="1"></button>
-          <button class="box" id="2"></button>
-          <button class="box" id="3"></button>
-          <button class="box" id="4"></button>
-          <button class="box" id="5"></button>
-          <button class="box" id="6"></button>
-          <button class="box" id="7"></button>
-          <button class="box" id="8"></button>
-          <button class="box" id="9"></button>
-          <button class="box" id="10"></button>
-          <button class="box" id="11"></button>
-          <button class="box" id="12"></button>
-          <button class="box" id="13"></button>
-          <button class="box" id="14"></button>
-          <button class="box" id="15"></button>
-          <button class="box" id="16"></button>
-          <button class="box" id="17"></button>
-          <button class="box" id="18"></button>
-          <button class="box" id="19"></button>
-          <button class="box" id="20"></button>
-          <button class="box" id="21"></button>
-          <button class="box" id="22"></button>
-          <button class="box" id="23"></button>
-          <button class="box" id="24"></button>
-          <button class="box" id="25"></button>
+          <button class="box" id=1></button>
+          <button class="box" id=2></button>
+          <button class="box" id=3></button>
+          <button class="box" id=4></button>
+          <button class="box" id=5></button>
+          <button class="box" id=6></button>
+          <button class="box" id=7></button>
+          <button class="box" id=8></button>
+          <button class="box" id=9></button>
+          <button class="box" id=10></button>
+          <button class="box" id=11></button>
+          <button class="box" id=12></button>
+          <button class="box" id=13></button>
+          <button class="box" id=14></button>
+          <button class="box" id=15></button>
+          <button class="box" id=16></button>
+          <button class="box" id=17></button>
+          <button class="box" id=18></button>
+          <button class="box" id=19></button>
+          <button class="box" id=20></button>
+          <button class="box" id=21></button>
+          <button class="box" id=22></button>
+          <button class="box" id=23></button>
+          <button class="box" id=24></button>
+          <button class="box" id=25></button>
         </div>
         <button id="openInstruction">How to play</button>
       </section>
@@ -123,6 +131,25 @@
           <li>The game will end if you press any mined block.</li>
         </ul>
       </div>
+    </section>
+
+    <section id="deposite">
+      <div>
+        <h3>Enter deposite Amout</h3>
+        <div style="display: flex;
+        flex-direction: column;gap: 10px;">
+          <input
+          type="number"
+          placeholder="Enter your amount"
+          class="depositeAmount"
+          min="1"
+        />
+        <button id="depositeSubmit">DEPOSITE</button>
+        <button id="closeDeposite">+</button>
+        </div>
+
+      </div>
+      
     </section>
 
     <script src="index.js"></script>
