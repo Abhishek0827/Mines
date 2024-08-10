@@ -158,7 +158,11 @@ img {
     main{
       margin-top: 10px;
         flex-direction: column-reverse;
+<<<<<<< HEAD
         gap: 7px;
+=======
+        gap: 30px;
+>>>>>>> a96f56a8d3206371a7a73b429c2f58c2b4003f69
     }   
     .one {
         margin: auto;
