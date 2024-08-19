@@ -23,7 +23,7 @@ const openInstruction = document.getElementById("openInstruction");
 const closeInstruction = document.getElementById("closeInstruction");
 const mainBoxContainer = document.querySelector(".mainBoxContainer");
 
-// let lossAudio = new Audio('assets/lose.mp3');
+let lossAudio = new Audio('assets/lose.mp3');
 
 // +++++++++++++++++++++ Default Balance +++++++++++++++++++++++++++++++++++
 
@@ -96,7 +96,7 @@ function setMines(minesNumber) {
 // ++++++++++++++++++++++Reset and Cash Out++++++++++++++++++++++++++++++++++
 
 function resetBlocks() {
-
+  cashOut.style.background="red";
   for (let j = 0; j < box.length; j++) {
     box[j].classList.remove('addShadow');
     box[j].innerHTML = "";
@@ -143,8 +143,6 @@ mainBoxContainer.addEventListener("click", (event) => {
     if (event.target.classList.contains('box')) {
       if (search(event.target.id, arr) != 0) {
 
-        
-        
         event.target.innerHTML = '<img src="assets/diamond.png" alt="">';
         lockedBlock.push(Number(event.target.id));
        
@@ -153,13 +151,13 @@ mainBoxContainer.addEventListener("click", (event) => {
 
         calculateProfit();
       } else {
-        // event.target.style = "box-shadow: none";
+        cashOut.style.background="rgb(118, 0, 0)";
         event.target.innerHTML = '<img src="assets/mine.png" alt="">';
         play = false;
         event.target.classList.remove('addShadow');
         gameOver();
         profitAmount.innerText = "0";
-        // lossAudio.play();
+        lossAudio.play();
       }
     }
     // else{
